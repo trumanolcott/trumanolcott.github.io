@@ -15,7 +15,7 @@ function randomTruman() {
     let ran;
     let i = 6;
     while (i>1) {
-        ran = Math.floor(Math.random()*i);
+        ran = Math.ceil(Math.random()*i);
         result += char.charAt(ran);
         char = char.replace(char.charAt(ran),"");
         i--;
