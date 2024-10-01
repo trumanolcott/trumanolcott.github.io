@@ -12,9 +12,9 @@ function appendEndless() {
 function randomTruman() {
     let char = "truman";
     let result = "";
-    let ran = "";
+    let ran;
     let i = 6;
-    while (i<1) {
+    while (i>1) {
         ran = Math.floor(Math.random()*i);
         result += char.charAt(ran);
         char = char.replace(char.charAt(ran),"");
