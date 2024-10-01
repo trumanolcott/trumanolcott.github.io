@@ -25,6 +25,7 @@ function randomTruman() {
   return result;
 }
 window.onscroll = function() {
+    console.log(window.scrollY);
     // append every 100 pixels
     if(window.scrollY % 100 < 1) {
         appendEndless();
