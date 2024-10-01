@@ -10,16 +10,19 @@ function appendEndless() {
     }
 }
 function randomTruman() {
-    let char = "truman";
-    let result = "";
+    let char = "ruma";
+    let result = "t";
     let ran;
-    let i = 6;
-    while (i>1) {
-        ran = Math.ceil(Math.random()*i);
+    let i = 4;
+    while (i>0) {
+        createElement("p",char)
+        ran = Math.floor(Math.random()*i);
         result += char.charAt(ran);
         char = char.replace(char.charAt(ran),"");
         i--;
     }
+  result += "n"
+  return result;
 }
 window.onscroll = function() {
     // append every 100 pixels
