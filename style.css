@@ -1,7 +1,5 @@
 pre {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 270px;
+    margin: 0;
+    width: 380px; 
+    margin: 0 auto 0 auto;
 }
