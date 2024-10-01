@@ -6,8 +6,8 @@ function appendEndless() {
     for (let index = 0; index < 200; index++) {
         const br = document.createElement("br");
         truman.append(br);
-        createElement("p", randomTruman());
-        //truman.append(randomTruman());
+        //createElement("p", randomTruman());
+        truman.append("t");
     }
 }
 function randomTruman() {
