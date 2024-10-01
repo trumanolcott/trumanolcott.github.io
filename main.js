@@ -1,4 +1,4 @@
-const cammel = document.querySelector("#truman");
+const truman = document.querySelector("#truman");
 
 appendEndless();
 
