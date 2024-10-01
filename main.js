@@ -7,7 +7,7 @@ function appendEndless() {
         const br = document.createElement("br");
         truman.append(br);
         //createElement(randomTruman());
-        truman.append("" + randomTruman());
+        truman.append("", randomTruman());
     }
 }
 function randomTruman() {
