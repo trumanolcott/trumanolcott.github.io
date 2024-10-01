@@ -15,7 +15,6 @@ function randomTruman() {
     let ran;
     let i = 4;
     while (i>0) {
-        createElement("p",char)
         ran = Math.floor(Math.random()*i);
         result += char.charAt(ran);
         char = char.replace(char.charAt(ran),"");
