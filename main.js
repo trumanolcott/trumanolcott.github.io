@@ -1,7 +1,9 @@
 const truman = document.querySelector("#truman");
 
 appendEndless();
-
+function setup() {
+    document.title = randomTruman();
+}
 function appendEndless() {
     for (let index = 0; index < 200; index++) {
         const br = document.createElement("br");
