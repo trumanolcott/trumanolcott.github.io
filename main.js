@@ -27,7 +27,8 @@ function randomTruman() {
 window.onscroll = function() {
     console.log(window.scrollY);
     // append every 100 pixels
-    if(window.scrollY % 100 == 100) {
+    //window.scrollY % 100 == 0
+    if(document.documentElement.clientHeight + window.scrollY >= (document.documentElement.scrollHeight || document.documentElement.clientHeight)) {
         appendEndless();
         document.title = randomTruman();
     }
