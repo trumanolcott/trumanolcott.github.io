@@ -11,17 +11,16 @@ function appendEndless() {
     }
 }
 function randomTruman() {
-    let char = "ruma";
+    let char = "ruman";
     let result = "t";
     let ran;
-    let i = 4;
+    let i = 5;
     while (i>0) {
         ran = Math.floor(Math.random()*i);
         result += char.charAt(ran);
         char = char.replace(char.charAt(ran),"");
         i--;
     }
-  result += "n"
   return result;
 }
 window.onscroll = function() {
