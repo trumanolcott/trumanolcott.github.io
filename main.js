@@ -2,14 +2,14 @@ const truman = document.querySelector("#truman");
 
 appendEndless();
 function setup() {
-    document.title = randomTruman() + randomOlcott();
+    document.title = randomTruman() + " " + randomOlcott();
 }
 function appendEndless() {
     for (let index = 0; index < 200; index++) {
         const br = document.createElement("br");
         truman.append(br);
         //createElement(randomTruman());
-        truman.append("", randomTruman() + randomOlcott());
+        truman.append("", randomTruman() + " " + randomOlcott());
     }
 }
 function randomTruman() {
@@ -45,6 +45,6 @@ window.onscroll = function() {
     //window.scrollY % 100 == 0
     if ((window.innerHeight + Math.round(window.scrollY)) >= (document.body.offsetHeight - 500)) {
         appendEndless();
-        document.title = randomTruman() + randomOlcott();
+        document.title = randomTruman() + " " + randomOlcott();
     }
 }
