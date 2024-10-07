@@ -2,49 +2,36 @@ const truman = document.querySelector("#truman");
 
 appendEndless();
 function setup() {
-    document.title = randomTruman() + " " + randomOlcott();
+    document.title = randomName("truman") + " " + randomName("olcott");
 }
 function appendEndless() {
     for (let index = 0; index < 200; index++) {
         const br = document.createElement("br");
         truman.append(br);
-        //createElement(randomTruman());
-        truman.append("", randomTruman() + " " + randomOlcott());
+        truman.append("", randomName("truman") + " " + randomOlcott("olcott"));
     }
 }
-function randomTruman() {
-    let char = "ruman";
-    let result = "t";
+
+function randomName(name) {
+    let result = name.charAt(0);
+    name = name.replace(name.charAt(0),"");
     let ran;
-    let i = 5;
+    let i = name.length;
     while (i>0) {
         ran = Math.floor(Math.random()*i);
-        result += char.charAt(ran);
-        char = char.replace(char.charAt(ran),"");
+        result += name.charAt(ran);
+        name = name.replace(name.charAt(ran),"");
         i--;
     }
   return result;
 }
 
-function randomOlcott() {
-    let char = "lcott";
-    let result = "o";
-    let ran;
-    let i = 5;
-    while (i>0) {
-        ran = Math.floor(Math.random()*i);
-        result += char.charAt(ran);
-        char = char.replace(char.charAt(ran),"");
-        i--;
-    }
-  return result;
-}
 window.onscroll = function() {
     console.log(window.scrollY);
     // append every 100 pixels
     //window.scrollY % 100 == 0
     if ((window.innerHeight + Math.round(window.scrollY)) >= (document.body.offsetHeight - 1000)) {
         appendEndless();
-        document.title = randomTruman() + " " + randomOlcott();
+        document.title = randomName("truman") + " " + randomOlcott("olcott");
     }
 }
