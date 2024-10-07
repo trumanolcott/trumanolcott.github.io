@@ -8,7 +8,7 @@ function appendEndless() {
     for (let index = 0; index < 200; index++) {
         const br = document.createElement("br");
         truman.append(br);
-        truman.append("", randomName("truman") + " " + randomOlcott("olcott"));
+        truman.append("", randomName("truman") + " " + randomName("olcott"));
     }
 }
 
@@ -32,6 +32,6 @@ window.onscroll = function() {
     //window.scrollY % 100 == 0
     if ((window.innerHeight + Math.round(window.scrollY)) >= (document.body.offsetHeight - 1000)) {
         appendEndless();
-        document.title = randomName("truman") + " " + randomOlcott("olcott");
+        document.title = randomName("truman") + " " + randomName("olcott");
     }
 }
